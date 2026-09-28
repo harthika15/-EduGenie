@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EduGenie — AI Learning Assistant</title>
+  <meta name="description" content="EduGenie is an AI-powered learning assistant for explanations, Q&A, quizzes, summaries and learning paths.">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <a class="brand" href="/">
+        <div class="brand-mark">E</div>
+        <div>
+          <div class="brand-name">EduGenie</div>
+          <div class="brand-tag">AI Learning Assistant</div>
+        </div>
+      </a>
+      <div class="status-pill"><span></span> Gemini powered</div>
+    </header>
+
+    <main class="main">
+      <section class="hero">
+        <div class="eyebrow">LEARN • PRACTICE • GROW</div>
+        <h1>Your personal AI study companion.</h1>
+        <p>Ask questions, simplify difficult concepts, create quizzes, summarize notes, or build a learning path — all in one place.</p>
+      </section>
+
+      <section class="workspace">
+        <aside class="sidebar">
+          <div class="side-label">Choose a study mode</div>
+          <button class="mode active" data-task="qa"><span>💬</span><div><b>Ask anything</b><small>Get a clear answer</small></div></button>
+          <button class="mode" data-task="explain"><span>💡</span><div><b>Explain a concept</b><small>Make it simple</small></div></button>
+          <button class="mode" data-task="quiz"><span>🧠</span><div><b>Generate quiz</b><small>Test your knowledge</small></div></button>
+          <button class="mode" data-task="summarize"><span>📝</span><div><b>Summarize</b><small>Revise faster</small></div></button>
+          <button class="mode" data-task="learn"><span>🗺️</span><div><b>Learning path</b><small>Study step by step</small></div></button>
+        </aside>
+
+        <section class="chat-card">
+          <div class="chat-head">
+            <div>
+              <div class="active-title" id="modeTitle">Ask anything</div>
+              <div class="active-desc" id="modeDesc">Ask EduGenie a question about any subject.</div>
+            </div>
+            <button class="clear-btn" id="clearBtn">Clear</button>
+          </div>
+
+          <div class="conversation" id="conversation">
+            <div class="welcome">
+              <div class="genie-icon">✦</div>
+              <h2>What are you learning today?</h2>
+              <p>Start with a question or choose a study mode from the left.</p>
+              <div class="suggestions">
+                <button data-suggest="Explain the difference between supervised and unsupervised learning.">Explain machine learning</button>
+                <button data-suggest="What is the water cycle?">Explain a science topic</button>
+                <button data-suggest="Create a quiz about SQL joins.">Quiz me on SQL</button>
+              </div>
+            </div>
+          </div>
+
+          <form id="assistantForm" class="composer">
+            <textarea id="inputText" placeholder="Ask a question, enter a topic, or paste your notes..." rows="3"></textarea>
+            <div class="composer-bottom">
+              <span id="charCount">0 / 5000</span>
+              <button class="send-btn" type="submit"><span>Generate</span> <b>↗</b></button>
+            </div>
+          </form>
+        </section>
+      </section>
+    </main>
+
+    <footer>EduGenie • Built for smarter, simpler learning</footer>
+  </div>
+  <script src="/static/app.js"></script>
+</body>
+</html>
